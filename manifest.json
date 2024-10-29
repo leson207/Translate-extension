@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Screen Capture with Red Box",
+    "version": "1.0",
+    "permissions": ["tabs", "activeTab", "scripting", "downloads"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js", "tesseract.min.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["ocrWorker.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+}
+  }
+  

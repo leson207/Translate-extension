@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Screen Capture",
+  "version": "1.0",
+  "description": "Capture visible screen of the current tab and save it.",
+  "permissions": ["tabs", "activeTab", "downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

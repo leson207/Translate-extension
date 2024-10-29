@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Screen Capture with Red Box",
+    "version": "1.0",
+    "permissions": ["tabs", "activeTab", "scripting", "downloads"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js", "tesseract.js"],
+        "css": ["styles.css"]
+      }
+    ]
+  }
+  
