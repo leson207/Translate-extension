@@ -1,0 +1,1 @@
+Hold ctr and left mouse to select a region, then translate the text in that region
